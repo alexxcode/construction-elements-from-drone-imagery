@@ -237,7 +237,7 @@ The comparison below covers the four annotated images in the validation and test
 
 The pipeline is complete and reproducible, from CVAT annotations to exported models, but the model is still a **proof of concept**. Its performance is limited by the data rather than by the training setup:
 
-- **Annotation coverage.** Only 14 of the 56 images (25 %) are annotated, and 10 of the 17 classes have no examples, so the model cannot learn them.
+- **Annotation coverage.** Only a portion of the total images are annotated, and some classes have no examples, so the model cannot learn them.
 - **Class imbalance.** *Silt* and *Trench protection plates* account for over half of all instances; *Yellow electrical-hazard tape* has only 2.
 - **Scale.** Downscaling 4000 × 3000 frames to 1024 px makes cables, conduits and tape almost invisible to the network.
 - **Small evaluation sets.** Two annotated images per split mean that val and test metrics have very high variance and should be read as indicative only.
@@ -245,7 +245,7 @@ The pipeline is complete and reproducible, from CVAT annotations to exported mod
 
 ## Future work
 
-- Annotate the remaining 42 images and add examples for the 10 empty classes.
+- Annotate the remaining images and add examples for the empty classes.
 - Tile the full-resolution images (for example 1024 × 1024 crops with overlap) so that thin objects keep their detail, and stitch the predictions back together.
 - Merge or redefine visually ambiguous classes (*Trench* vs. *Silt*) or add contextual rules.
 - Try larger backbones (`yolov8s-seg`, `yolov8m-seg`) once there is more data, and use k-fold cross-validation for more reliable metrics.
