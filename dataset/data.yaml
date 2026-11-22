@@ -1,0 +1,8 @@
+# YOLOv8-seg dataset config (paths relative to this folder)
+path: .
+train: images/train
+val: images/val
+test: images/test
+
+nc: 17
+names: ["Poste", "Puerta de acceso", "Placa Avifauna", "Malla valla", "Paso de fauna", "Placas protección zanja", "Arquetas", "Limo", "Cable MT", "Contenedor", "Zanja", "Spray guía zanja", "Bobinas", "Tubo corrugado", "cable de cobre desnudo", "cinta amarilla  de riesgo electrico", "cable BT"]
